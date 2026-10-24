@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Subscription Tracker</string>
+    <string name="add_subscription">Add subscription</string>
+    <string name="edit_subscription">Edit subscription</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+    <string name="name_hint">Name (e.g. Netflix)</string>
+    <string name="price_hint">Price</string>
+    <string name="monthly">Monthly</string>
+    <string name="yearly">Yearly</string>
+    <string name="free_trial">This is a free trial (renewal date = when the trial ends)</string>
+    <string name="renewal_date_format">Renewal date: %1$s</string>
+    <string name="enter_name">Please enter a name</string>
+    <string name="enter_price">Please enter a valid price</string>
+    <string name="empty_message">No subscriptions yet.\nTap \"Add subscription\" to start tracking.</string>
+    <string name="summary_format">%1$s per month  •  %2$s per year  •  %3$d active</string>
+    <string name="per_month">month</string>
+    <string name="per_year">year</string>
+    <string name="trial_name">%1$s (free trial)</string>
+    <string name="item_detail">%1$s / %2$s  •  renews %3$s</string>
+    <string name="trial_ended">Trial ended</string>
+    <string name="renews_today">Today</string>
+    <string name="renews_tomorrow">Tomorrow</string>
+    <string name="renews_in_days">In %1$d days</string>
+    <string name="notif_channel">Renewal reminders</string>
+    <string name="notif_title">Renewal reminder</string>
+    <string name="notif_today">%1$s renews today</string>
+    <string name="notif_tomorrow">%1$s renews tomorrow</string>
+    <string name="notif_days">%1$s renews in %2$d days</string>
+</resources>
