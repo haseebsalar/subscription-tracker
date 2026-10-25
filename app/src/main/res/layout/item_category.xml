@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
@@ -9,19 +10,29 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center_vertical"
         android:orientation="horizontal">
+
+        <View
+            android:id="@+id/catDot"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@drawable/bg_dot" />
 
         <TextView
             android:id="@+id/catName"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
             android:layout_weight="1"
+            android:textColor="@color/text_primary"
             android:textSize="15sp" />
 
         <TextView
             android:id="@+id/catAmount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/text_primary"
             android:textSize="15sp"
             android:textStyle="bold" />
     </LinearLayout>
@@ -30,5 +41,8 @@
         android:id="@+id/catBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp" />
+        android:layout_marginTop="6dp"
+        app:trackColor="@color/stroke"
+        app:trackCornerRadius="4dp"
+        app:trackThickness="6dp" />
 </LinearLayout>

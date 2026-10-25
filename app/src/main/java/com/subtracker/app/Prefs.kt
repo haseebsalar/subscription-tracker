@@ -51,7 +51,7 @@ object Prefs {
     }
 
     fun money(c: Context, value: Double): String =
-        String.format(Locale.US, "%s %.2f", currency(c).symbol, value)
+        String.format(Locale.US, "%s %,.2f", currency(c).symbol, value)
 
     fun reminderHour(c: Context): Int = p(c).getInt("hour", 9)
     fun reminderMinute(c: Context): Int = p(c).getInt("minute", 0)

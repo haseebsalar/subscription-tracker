@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+    <path
+        android:fillColor="@color/brand_container"
+        android:pathData="M60,60m-54,0a54,54 0,1 1,108 0a54,54 0,1 1,-108 0" />
+    <path
+        android:fillColor="@color/card_bg"
+        android:strokeWidth="3"
+        android:strokeColor="@color/brand"
+        android:pathData="M30,40h60a8,8 0,0 1,8 8v36a8,8 0,0 1,-8 8h-60a8,8 0,0 1,-8 -8v-36a8,8 0,0 1,8 -8z" />
+    <path
+        android:fillColor="@color/brand"
+        android:pathData="M22,54h76v10h-76z" />
+    <path
+        android:fillColor="@color/brand_light"
+        android:pathData="M32,76h22v6h-22z" />
+</vector>

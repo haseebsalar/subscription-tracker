@@ -7,12 +7,11 @@ import android.net.Uri
 import android.os.Bundle
 import android.provider.Settings
 import android.view.View
-import android.widget.AdapterView
 import android.widget.ArrayAdapter
-import android.widget.CheckBox
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
+import com.google.android.material.chip.Chip
 import com.google.android.ump.ConsentInformation
 import com.google.android.ump.UserMessagingPlatform
 import com.subtracker.app.databinding.ActivitySettingsBinding
@@ -43,20 +42,23 @@ class SettingsActivity : BaseActivity() {
         setupLock()
         setupBackup()
         setupPrivacy()
+
+        val version = try {
+            packageManager.getPackageInfo(packageName, 0).versionName ?: ""
+        } catch (e: Exception) {
+            ""
+        }
+        binding.versionText.text = getString(R.string.version_format, version)
     }
 
     private fun setupCurrency() {
-        binding.currencySpinner.adapter =
-            ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, Prefs.currencies)
-        val current = Prefs.currencies.indexOfFirst { it.code == Prefs.currency(this).code }
-        binding.currencySpinner.setSelection(current.coerceAtLeast(0))
-        binding.currencySpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(p: AdapterView<*>?, v: View?, pos: Int, id: Long) {
-                Prefs.setCurrency(this@SettingsActivity, Prefs.currencies[pos].code)
-                RenewalsWidget.updateAll(this@SettingsActivity)
-            }
-
-            override fun onNothingSelected(p: AdapterView<*>?) {}
+        binding.currencyInput.setAdapter(
+            ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, Prefs.currencies)
+        )
+        binding.currencyInput.setText(Prefs.currency(this).toString(), false)
+        binding.currencyInput.setOnItemClickListener { _, _, pos, _ ->
+            Prefs.setCurrency(this, Prefs.currencies[pos].code)
+            RenewalsWidget.updateAll(this)
         }
     }
 
@@ -82,20 +84,20 @@ class SettingsActivity : BaseActivity() {
         }
 
         val selected = Prefs.leadDays(this).toMutableSet()
-        binding.leadContainer.removeAllViews()
+        binding.leadChips.removeAllViews()
         Prefs.leadDayOptions.forEach { d ->
-            val box = CheckBox(this)
-            box.text = when (d) {
+            val chip = layoutInflater.inflate(R.layout.chip_lead, binding.leadChips, false) as Chip
+            chip.text = when (d) {
                 0 -> getString(R.string.lead_day_zero)
                 1 -> getString(R.string.lead_day_one)
                 else -> getString(R.string.lead_day_many, d)
             }
-            box.isChecked = d in selected
-            box.setOnCheckedChangeListener { _, checked ->
+            chip.isChecked = d in selected
+            chip.setOnCheckedChangeListener { _, checked ->
                 if (checked) selected.add(d) else selected.remove(d)
                 Prefs.setLeadDays(this, selected)
             }
-            binding.leadContainer.addView(box)
+            binding.leadChips.addView(chip)
         }
 
         binding.batteryButton.setOnClickListener {

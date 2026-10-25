@@ -2,7 +2,7 @@
 
 An Android app that tracks recurring subscriptions and free trials. All data stays on the device.
 
-## Features (v1.1)
+## Features (v1.2)
 
 - Currency choice, categories, and a spending breakdown screen
 - Reminders at a time you choose, on the days you choose (7, 3, 2, 1 or 0 days before)
@@ -13,6 +13,10 @@ An Android app that tracks recurring subscriptions and free trials. All data sta
 - Optional app lock (fingerprint, face or phone PIN)
 - Backup and restore to a JSON file
 - Ad consent form (EU/UK) through Google's User Messaging Platform
+
+## Design
+
+Material 3 theme with light and dark mode, a summary card on the home screen, urgency-coloured renewal badges, a bottom-sheet editor and a donut chart on the Stats screen. The logo and Google Play graphics are in `store-assets/` (`icon-512.png` for the store icon, `feature-graphic.png` for the 1024x500 banner).
 
 ## Getting the APK
 

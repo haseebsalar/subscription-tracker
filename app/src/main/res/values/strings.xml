@@ -2,7 +2,14 @@
 <resources>
     <string name="app_name">Subscription Tracker</string>
 
-    <!-- Main screen -->
+    <!-- Home -->
+    <string name="home_title">Subscriptions</string>
+    <string name="hero_label">Monthly spend</string>
+    <string name="hero_sub">%1$s per year  •  %2$d active</string>
+    <string name="hero_next">Next: %1$s  •  %2$s</string>
+    <string name="hero_none">No upcoming renewals</string>
+    <string name="hero_saved">Saving %1$s per month from %2$d cancelled</string>
+    <string name="add_short">Add</string>
     <string name="add_subscription">Add subscription</string>
     <string name="edit_subscription">Edit subscription</string>
     <string name="save">Save</string>
@@ -10,15 +17,14 @@
     <string name="delete">Delete</string>
     <string name="stats">Stats</string>
     <string name="settings">Settings</string>
-    <string name="search_hint">Search</string>
-    <string name="empty_message">No subscriptions yet.\nTap \"Add subscription\" to start tracking.</string>
-    <string name="no_results">No subscriptions match your search.</string>
-    <string name="summary_format">%1$s per month  •  %2$s per year  •  %3$d active</string>
-    <string name="saved_format">You save %1$s per month from %2$d cancelled</string>
-    <string name="per_month">month</string>
-    <string name="per_year">year</string>
-    <string name="trial_name">%1$s (free trial)</string>
-    <string name="item_detail">%1$s / %2$s  •  %3$s\nRenews %4$s</string>
+    <string name="sort">Sort</string>
+    <string name="search_hint">Search subscriptions</string>
+    <string name="empty_title">No subscriptions yet</string>
+    <string name="empty_body">Tap Add to track your first subscription\nand never miss a renewal.</string>
+    <string name="no_results_title">Nothing found</string>
+    <string name="no_results_body">Try a different name or category.</string>
+    <string name="item_meta">%1$s  •  %2$s  •  %3$s</string>
+    <string name="item_meta_trial">Free trial  •  %1$s  •  Ends %2$s</string>
     <string name="trial_ended">Trial ended</string>
     <string name="renews_today">Today</string>
     <string name="renews_tomorrow">Tomorrow</string>
@@ -26,7 +32,7 @@
     <string name="status_paused">Paused</string>
     <string name="status_cancelled">Cancelled</string>
     <string name="widget_row">%1$s  •  %2$s  •  %3$s</string>
-    <string name="widget_title">Upcoming renewals</string>
+    <string name="widget_title">UPCOMING RENEWALS</string>
     <string name="widget_empty">Nothing due soon</string>
     <string name="widget_description">Shows your next three renewals</string>
 
@@ -41,15 +47,16 @@
         <item>Cancelled</item>
     </string-array>
 
-    <!-- Add / edit dialog -->
+    <!-- Add / edit sheet -->
     <string name="name_hint">Name (e.g. Netflix)</string>
     <string name="price_hint">Price</string>
     <string name="monthly">Monthly</string>
     <string name="yearly">Yearly</string>
     <string name="category_label">Category</string>
     <string name="status_label">Status</string>
-    <string name="free_trial">This is a free trial (renewal date = when the trial ends)</string>
-    <string name="renewal_date_format">Renewal date: %1$s</string>
+    <string name="free_trial">Free trial (date = when the trial ends)</string>
+    <string name="renewal_date_format">Renews on %1$s</string>
+    <string name="pick_date">Choose renewal date</string>
     <string name="cancel_link_hint">Cancel link or note (optional)</string>
     <string name="open_cancel_page">Open cancel page</string>
     <string name="enter_cancel_link">Add a cancel link first</string>
@@ -62,17 +69,18 @@
 
     <!-- Stats -->
     <string name="stats_title">Spending overview</string>
-    <string name="stats_monthly">Monthly total</string>
-    <string name="stats_yearly">Yearly total</string>
-    <string name="stats_next30">Due in the next 30 days</string>
+    <string name="stats_per_month">per month</string>
+    <string name="stats_yearly">Per year</string>
+    <string name="stats_next30">Due in 30 days</string>
     <string name="stats_saved">Saved per month by cancelling</string>
-    <string name="stats_by_category">By category (monthly)</string>
+    <string name="stats_by_category">By category</string>
     <string name="stats_empty">Add subscriptions to see a breakdown.</string>
-    <string name="category_share">%1$s (%2$d%%)</string>
+    <string name="category_share">%1$s  (%2$d%%)</string>
     <string name="back">Back</string>
 
     <!-- Settings -->
     <string name="settings_title">Settings</string>
+    <string name="general_title">General</string>
     <string name="currency_label">Currency</string>
     <string name="reminders_title">Reminders</string>
     <string name="reminder_time_format">Remind me at %1$s</string>
@@ -98,6 +106,7 @@
     <string name="replace">Replace</string>
     <string name="import_done">Import finished</string>
     <string name="privacy_options">Ad privacy choices</string>
+    <string name="version_format">Subscription Tracker %1$s  •  Your data stays on this device</string>
 
     <!-- Lock screen -->
     <string name="unlock_title">Unlock Subscription Tracker</string>

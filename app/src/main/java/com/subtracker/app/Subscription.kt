@@ -1,5 +1,6 @@
 package com.subtracker.app
 
+import android.graphics.Color
 import org.json.JSONArray
 import org.json.JSONObject
 import java.time.LocalDate
@@ -13,6 +14,19 @@ object Categories {
         "Entertainment", "Music", "Gaming", "Work", "Cloud & Storage",
         "Education", "Health", "Utilities", "Other"
     )
+
+    private val colors = mapOf(
+        "Entertainment" to "#E11D48",
+        "Music" to "#7C3AED",
+        "Gaming" to "#2563EB",
+        "Work" to "#0891B2",
+        "Cloud & Storage" to "#0D9488",
+        "Education" to "#D97706",
+        "Health" to "#16A34A",
+        "Utilities" to "#475569"
+    )
+
+    fun color(category: String): Int = Color.parseColor(colors[category] ?: "#6B7280")
 }
 
 data class PriceChange(val date: LocalDate, val oldPrice: Double, val newPrice: Double)
