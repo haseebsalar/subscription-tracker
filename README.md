@@ -1,6 +1,18 @@
 # Subscription Tracker
 
-An Android app that tracks recurring subscriptions and free trials, shows your monthly and yearly total, and sends a notification 3 days, 1 day, and on the day a renewal is due. All data stays on the device.
+An Android app that tracks recurring subscriptions and free trials. All data stays on the device.
+
+## Features (v1.1)
+
+- Currency choice, categories, and a spending breakdown screen
+- Reminders at a time you choose, on the days you choose (7, 3, 2, 1 or 0 days before)
+- Active / paused / cancelled status, with "money saved by cancelling"
+- Cancel link or note per subscription, and price-change history
+- Search and sort
+- Home-screen widget with the next three renewals
+- Optional app lock (fingerprint, face or phone PIN)
+- Backup and restore to a JSON file
+- Ad consent form (EU/UK) through Google's User Messaging Platform
 
 ## Getting the APK
 

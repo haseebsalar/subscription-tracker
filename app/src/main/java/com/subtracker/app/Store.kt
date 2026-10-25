@@ -24,5 +24,6 @@ object Store {
         list.forEach { arr.put(it.toJson()) }
         context.getSharedPreferences(PREFS, Context.MODE_PRIVATE)
             .edit().putString(KEY, arr.toString()).apply()
+        RenewalsWidget.updateAll(context)
     }
 }
